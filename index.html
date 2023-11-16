@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT5 Students</title>
+</head>
+<body>
+    <button id="citButton">CIT Majors</button>
+    <button id="busButton">Business Majors</button>
+
+    <div id="display"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="your_script.js"></script>
+<script id="students-template" type="text/x-handlebars-template">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Major</th>
+            <th>Midterm Score</th>
+            <th>Final Exam Score</th>
+        </tr>
+        {{#each students}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{major}}</td>
+                <td>{{midterm}}</td>
+                <td>{{final}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</script>
+</body>
+</html>
